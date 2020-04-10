@@ -15,6 +15,19 @@
 	}
 }
 
+.domain-picker__panel-row {
+	position: relative;
+}
+
+.domain-picker__close-button {
+	// Close button has to appear after search input
+	// as @wordpress/popover finds and focuses on
+	// the first found focusable element in the popover content.
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 .domain-picker__header {
 	display: flex;
 	justify-content: space-between;

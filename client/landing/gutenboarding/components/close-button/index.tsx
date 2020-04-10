@@ -7,12 +7,13 @@ import { useI18n } from '@automattic/react-i18n';
 
 interface CloseButtonProps {
 	onClose: () => void;
+	className?: string;
 }
 
-const CloseButton = ( { onClose }: CloseButtonProps ) => {
+const CloseButton = ( { className, onClose }: CloseButtonProps ) => {
 	const { __ } = useI18n();
 	return (
-		<Button onClick={ onClose } label={ __( 'Close dialog' ) }>
+		<Button className={ className } onClick={ onClose } label={ __( 'Close dialog' ) }>
 			<svg
 				width="12"
 				height="12"
